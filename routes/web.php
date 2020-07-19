@@ -24,6 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // Route untuk admin
-Route::prefix('admin')->namespace('Admin')->group(function(){     
-        Route::get('/', 'AdminController@index');
+Route::group(['prefix' => 'admin',  'middleware' => 'auth', 'namespace' => 'Admin'], function(){
+    Route::get('/', 'AdminController@index');
 });
