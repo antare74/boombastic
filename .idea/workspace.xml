@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5981d8-14cf-43c3-b4b1-c675495363c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/bombastis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bombastis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Repo/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Repo/Repository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,6 +161,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -199,10 +201,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="157" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595264671539">
+    <state x="416" y="157" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595343300944">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="416" y="157" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1595264671539" />
+    <state x="416" y="157" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1595343300944" />
     <state x="466" y="157" width="424" height="480" key="FileChooserDialogImpl" timestamp="1595253054172">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -215,10 +217,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="391" y="143" width="583" height="512" key="find.popup/0.30.1366.738@0.30.1366.738" timestamp="1595172825819" />
-    <state x="347" y="177" key="run.anything.popup" timestamp="1595267505381">
+    <state x="347" y="177" key="run.anything.popup" timestamp="1595343516210">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="347" y="177" key="run.anything.popup/0.30.1366.738@0.30.1366.738" timestamp="1595267505381" />
+    <state x="347" y="177" key="run.anything.popup/0.30.1366.738@0.30.1366.738" timestamp="1595343516210" />
     <state x="347" y="46" width="672" height="676" key="search.everywhere.popup" timestamp="1595266479648">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

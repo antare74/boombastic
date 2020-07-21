@@ -29,18 +29,16 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth', 'namespace' => 'Admi
     Route::get('/contact/{id?}', 'AdminController@indexFormContact');
 });
 
-Route::group(['namespace' => 'Admin'], function(){
-    /* contact route */
-    Route::group(['prefix' => 'contact'], function() {
-        Route::any('/store/{id?}', 'AdminController@storeFormContact');
-        Route::get('/delete/{id?}', 'AdminController@deleteFormContact');
-    });
-    /* catering route */
-    Route::group(['prefix' => 'catering'], function() {
-        Route::get('/store', 'AdminController@storeFormCatering');
-        Route::get('/delete/{id?}', 'AdminController@deleteFormCatering');
-        Route::get('/update/{id?}', 'AdminController@updateFormCatering');
-    });
+/* contact route */
+Route::group(['prefix' => 'contact'], function() {
+    Route::get('/{id?}', 'ContactController@indexFormContact');
+    Route::any('/store/{id?}', 'ContactController@storeFormContact');
+    Route::get('/delete/{id?}', 'ContactController@deleteFormContact')->middleware('auth');
+});
+/* catering route */
+Route::group(['prefix' => 'catering'], function() {
+    Route::any('/store', 'CateringController@storeFormCatering');
+    Route::get('/delete/{id?}', 'CateringController@deleteFormCatering')->middleware('auth');
 });
 
 /* redirect register route */
