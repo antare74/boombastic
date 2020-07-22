@@ -7,3 +7,4 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
     <!-- styles -->
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/mobile-style.css') }}">
