@@ -4,7 +4,7 @@
     ===============
     */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 /*
     =============== 
     Variables
@@ -41,15 +41,16 @@
     --clr-red-dark: hsl(360, 67%, 44%);
     --clr-red-light: hsl(360, 71%, 66%);
     --clr-green-dark: hsl(124, 36%, 32%);
-    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-green-light: rgb(118, 184, 40);
     --clr-pink-dark: rgb(238, 62, 129);
     --clr-yellow-light: rgb(248, 191, 7);
     --clr-yellow-dark: rgb(253, 217, 97);
     --clr-black: #222;
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
+    --ff-third: "Fredoka One", cursive;
     --transition: all 0.3s linear;
-    --spacing: 0.25rem;
+    --spacing: 0.15rem;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -73,9 +74,9 @@
 
 body {
     font-family: var(--ff-secondary);
-    background: var(--clr-yellow-dark);
+    background: var(--clr-yellow-light);
     color: var(--clr-grey-1);
-    line-height: 1.5;
+    line-height: 1;
     font-size: 0.875rem;
 }
 
@@ -212,26 +213,21 @@ main {
     ===============
     */
 
-section {
-    display: flex;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero {
+.home-section .jumbotron {
     background-image: url("/frontend/img/photo/burger.jpg");
-    height: 500%;
-    width: 100%;
+    height: 100vh;
     background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 5vh;
-    background-position: 50% 100%;
+    background-position: center;
+    color: #fff;
+    border-radius: 0px !important;
 }
 
-.logo_big {
-    top: 1rem;
-    height: 100px;
+.home-section .intro {
+    padding-top: 160px;
+}
+
+.intro img {
+    width: 220px;
 }
 
 /*
@@ -242,7 +238,7 @@ Section 2 Locations
 
 #paralax-image {
     background-image: url("/frontend/img/photo/location.jpg");
-    height: 500px;
+    height: 300px;
     margin-bottom: 50px;
     background-attachment: fixed;
     background-position: center;
@@ -250,92 +246,63 @@ Section 2 Locations
     background-size: cover;
 }
 
-#paralax-image-2 {
-    background-image: url("/frontend/img/photo/ingredient.jpg");
-    min-height: 100vh;
-    display: grid;
-    background-position: center;
-    background-repeat: no-repeat;
-    place-items: center;
-    background-size: cover;
+.location h1 {
+    color: var(--clr-green-light);
+    font-family: var(--ff-third);
+}
+
+.location h4 {
+    color: var(--clr-pink-dark);
+}
+
+.location p {
+    color: var(--clr-pink-dark);
+}
+
+.location a {
+    color: var(--clr-pink-dark);
+}
+
+.location span {
+    background-color: var(--clr-white);
+    padding: 0 15px;
 }
 
 /*
 =============== 
-Modal
+Section 3 Our Menu
 ===============
 */
 
-.banner {
-    background: var(--clr-white);
-    padding: 4rem 0;
-    /* border-radius: var(--radius); */
-    box-shadow: var(--light-shadow);
-    text-align: center;
-    width: 30vw;
-    max-width: var(--fixed-width);
+.ourmenu-section .jumbotron {
+    background-image: url("/frontend/img/photo/ingredient.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 0px !important;
 }
 
-.banner h1 {
+.ourmenu-section .intro {
+    padding-top: 100px;
+}
+
+.intro h5 {
     font-weight: bold;
-    color: var(--clr-green-dark);
+    color: var(--clr-pink-dark);
 }
 
-.modal-btn {
-    margin-top: 2rem;
+.menu-btn {
+    margin-top: 1rem;
     background: var(--clr-yellow-light);
     border-color: var(--clr-yellow-light);
     color: var(--clr-pink-dark);
     border-radius: 0;
     font-weight: bold;
 }
-.modal-btn:hover {
+.menu-btn:hover {
     background: transparent;
-    color: var(--clr-primary-5);
-}
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(73, 166, 233, 0.5);
-    display: grid;
-    place-items: center;
-    transition: var(--transition);
-    visibility: hidden;
-    z-index: -10;
-}
-/* OPEN/CLOSE MODAL */
-.open-modal {
-    visibility: visible;
-    z-index: 10;
-}
-.modal-container {
-    background: var(--clr-white);
-    border-radius: var(--radius);
-    width: 90vw;
-    height: 30vh;
-    max-width: var(--fixed-width);
-    text-align: center;
-    display: grid;
-    place-items: center;
-    position: relative;
-}
-.close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    background: transparent;
-    border-color: transparent;
-    color: var(--clr-red-dark);
-    cursor: pointer;
-    transition: var(--transition);
-}
-.close-button:hover {
-    color: var(--clr-red-light);
-    transform: scale(1.3);
+    color: var(--clr-pink-dark);
 }
 
 /*
@@ -519,7 +486,7 @@ nav {
         right: 0rem;
     }
 
-    .hero {
+    /* .hero {
         height: 150vh;
         padding-top: 13vh;
         background-position: 50% 125%;
@@ -528,5 +495,5 @@ nav {
     .logo_big {
         top: 10rem;
         height: 300px;
-    }
+    } */
 }
