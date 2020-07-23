@@ -1,14 +1,6 @@
 @extends('layouts.admin')
 
 @section('title','Halaman Admin')
-<style>
-    .catering-message{
-        white-space: nowrap;
-        max-width: 80px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-</style>
 @section('content')
     <div class="wrapper">
         <div class="content-wrapper">
@@ -16,12 +8,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Catering</h1>
+                            <h1>contact</h1>
                         </div>
                         <div class="col-sm-6">
-{{--                            <ol class="breadcrumb float-sm-right">--}}
-{{--                                <li class="breadcrumb-item"><a href="#">Catering</a></li>--}}
-{{--                            </ol>--}}
+                            {{--                            <ol class="breadcrumb float-sm-right">--}}
+                            {{--                                <li class="breadcrumb-item"><a href="#">contact</a></li>--}}
+                            {{--                            </ol>--}}
                         </div>
                     </div>
                 </div>
@@ -29,10 +21,10 @@
             <section class="content">
                 <div class="container-fluid">
                     @if(session()->has('error'))
-                            <div class="alert alert-danger">
-                                <button type="button" class="close" data-dismiss="alert">x</button>
-                                <strong>Failed! </strong> {{ session()->get('error') }}
-                            </div>
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>Failed! </strong> {{ session()->get('error') }}
+                        </div>
                     @elseif(session()->has('success'))
                         <div class="alert alert-success">
                             <button type="button" class="close" data-dismiss="alert">x</button>
@@ -61,37 +53,31 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
-                                            <th>Message</th>
                                             <th>Received</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @php
-                                        $i =1;
+                                            $i =1;
                                         @endphp
-                                        @if($caterings)
-                                            @foreach($caterings as $catering)
+                                        @if($contacts)
+                                            @foreach($contacts as $contact)
                                                 <tr>
                                                     <td>{{ $i++ }}</td>
-                                                    <td>{{ $catering->full_name }}</td>
-                                                    <td>{{ $catering->email }}</td>
-                                                    <td> {{ $catering->phone }} </td>
+                                                    <td>{{ $contact->full_name }}</td>
+                                                    <td>{{ $contact->email }}</td>
+                                                    <td> {{ $contact->phone }} </td>
+                                                    <td> {{ $contact->created_at }} </td>
                                                     <td>
-                                                        <p class="catering-message">
-                                                        {{ $catering->message }}
-                                                        </p>
-                                                    </td>
-                                                    <td> {{ $catering->created_at }} </td>
-                                                    <td>
-                                                        <a href="catering/{{ $catering->id }}" class="btn btn-sm btn-info"><span class="fa fa-search"></span> Detail
+                                                        <a href="contact/{{ $contact->id }}" class="btn btn-sm btn-info"><span class="fa fa-search"></span> Detail
                                                         </a>
-                                                        <button  class="btn btn-sm  btn-danger" data-toggle="modal" data-target="#exampleModal{{ $catering->id }}"><span class="fa fa-trash"></span>
+                                                        <button  class="btn btn-sm  btn-danger" data-toggle="modal" data-target="#exampleModal{{ $contact->id }}"><span class="fa fa-trash"></span>
                                                             Delete
                                                         </button>
                                                     </td>
                                                 </tr>
-                                                <div class="modal fade" id="exampleModal{{ $catering->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{ $catering->id }}" aria-hidden="true">
+                                                <div class="modal fade" id="exampleModal{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{ $contact->id }}" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
@@ -105,7 +91,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                                <a href="catering/delete/{{ $catering->id }}" class="btn btn-primary"> Confirm </a>
+                                                                <a href="contact/delete/{{ $contact->id }}" class="btn btn-primary"> Confirm </a>
                                                             </div>
                                                         </div>
                                                     </div>

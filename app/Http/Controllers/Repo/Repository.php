@@ -77,6 +77,9 @@ class Repository
         return Catering::with([])->get();
     }
 
+    public function getAllContact(){
+        return Contact::with([])->get();
+    }
     public function storeFormContact($request, $id){
         $result     = ['status' => false, 'message' => ''];
         $validator  = Validator::make($request->all(),
@@ -87,7 +90,7 @@ class Repository
             ]
         );
         if ($validator->fails()) {
-            $result['message'] = $validator->errors()->all();
+            $result['message'] = $validator->errors()->first();
             return $result;
         }
         $contact        = new Contact();
@@ -119,7 +122,7 @@ class Repository
             ]
         );
         if ($validator->fails()) {
-            $result['message'] = $validator->errors()->all();
+            $result['message'] = $validator->errors()->first();
             return $result;
         }
         $catering       = new Catering();
@@ -142,13 +145,24 @@ class Repository
     }
 
     public function deleteFormContact($id){
-        $contact    = $this->findContactById($id);
-        $deleted    = $contact->delete();
-        if ($deleted){
-            $contact->deleted_by = Auth::user()->id;
-            $contact->save();
-            return $contact;
-        };
+        $result = ['status' => false, 'message' => ''];
+        if (!$id){
+            $result['message'] = 'required params is missing!';
+        }
+        try {
+            $contact    = $this->findContactById($id);
+            $deleted    = $contact->delete();
+            if ($deleted){
+                $contact->deleted_by = Auth::user()->id;
+                $contact->save();
+                $result['status']   = true;
+                $result['message']  = 'deleted!';
+                return $result;
+            };
+        }catch (\Exception $e){
+            $result['message'] = $e->getMessage();
+            return $result;
+        }
     }
 
     public function deleteFormCatering($id){

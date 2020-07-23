@@ -30,15 +30,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 
     /* contact route */
     Route::group(['prefix' => 'contact'], function() {
-        Route::get('/{action?}/{id?}', 'AdminController@detailFormContact');
-        Route::any('/update/{id?}', 'AdminController@storeFormContact');
+        Route::get('/{id?}', 'AdminController@indexFormContact');
+        Route::get('/delete/{id?}', 'AdminController@deleteFormContact');
+        Route::any('/store/{id?}', 'AdminController@storeFormContact');
     });
 
     /* catering route */
     Route::group(['prefix' => 'catering'], function() {
         Route::get('/{id?}', 'AdminController@indexFormCatering');
         Route::get('/delete/{id?}', 'AdminController@deleteFormCatering');
-        Route::any('/store/{id?}', 'AdminController@storeFormContact');
+        Route::any('/store/{id?}', 'AdminController@storeFormCatering');
     });
 });
 

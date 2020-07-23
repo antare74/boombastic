@@ -57,7 +57,7 @@
                                             NAME
                                         </span>
                                         </div>
-                                        <input type="text" class="form-control input-disable" name="full_name" value="{{ $caterings->full_name }}" id="catering-name" aria-describedby="basic-addon3" disabled required>
+                                        <input type="text" class="form-control input-disable" name="full_name" value="{{ $caterings->full_name }}" id="catering-name" aria-describedby="basic-addon3" required disabled>
                                     </div>
                                     <div class="input-group my-3">
                                         <div class="input-group-prepend">
@@ -67,7 +67,7 @@
                                                 PHONE
                                         </span>
                                         </div>
-                                        <input type="text" class="form-control input-disable" name="phone" value="{{ $caterings->phone }}" id="catering-phone" aria-describedby="basic-addon3" disabled>
+                                        <input type="text" class="form-control input-disable" name="phone" value="{{ $caterings->phone }}" id="catering-phone" aria-describedby="basic-addon3" required disabled>
                                     </div>
                                     <div class="input-group my-3">
                                         <div class="input-group-prepend">
@@ -77,7 +77,7 @@
                                                 EMAIL
                                         </span>
                                         </div>
-                                        <input type="email" class="form-control input-disable" name="email" value="{{ $caterings->email }}" id="catering-email" aria-describedby="basic-addon3" disabled>
+                                        <input type="email" class="form-control input-disable" name="email" value="{{ $caterings->email }}" id="catering-email" aria-describedby="basic-addon3" required disabled>
                                     </div>
                                     <div class="input-group mt-3 mb-2">
                                         <div class="input-group-prepend">

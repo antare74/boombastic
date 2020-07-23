@@ -27,11 +27,28 @@ class AdminController extends Controller
         return redirect()->back()->with('success', $delete['message']);
     }
 
-    public function storeFormContact(Request $request, $id){
-        $caterings = $this->repo->storeFormCatering($request, $id);
-        if (!$caterings['status']){
-            return redirect()->back()->with('error', $caterings['message']);
+    public function deleteFormContact($id){
+        $delete = $this->repo->deleteFormContact($id);
+        if (!$delete['status']){
+            return redirect()->back()->with('error', $delete['message']);
         }
+        return redirect()->back()->with('success', $delete['message']);
+    }
+
+    public function storeFormCatering(Request $request, $id){
+        $contacts = $this->repo->storeFormCatering($request, $id);
+        if (!$contacts['status']){
+            return redirect()->back()->with('error', $contacts['message']);
+        }
+        return redirect()->back()->with('success', 'catering updated!');
+    }
+
+    public function storeFormContact(Request $request, $id){
+        $contacts = $this->repo->storeFormContact($request, $id);
+        if (!$contacts['status']){
+            return redirect()->back()->with('error', $contacts['message']);
+        }
+        return redirect()->back()->with('success', 'contact updated!');
     }
 
     public function indexFormCatering($id = null){
@@ -45,5 +62,14 @@ class AdminController extends Controller
         }
     }
 
-
+    public function indexFormContact($id = null){
+        if (!$id){
+            $contacts = $this->repo->getAllContact();
+            return view('pages.admin.contact.index', compact('contacts'));
+        }
+        $contacts = $this->repo->findContactById($id);
+        if ($contacts){
+            return view('pages.admin.contact.detail', compact('contacts'));
+        }
+    }
 }
