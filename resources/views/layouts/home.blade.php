@@ -17,7 +17,7 @@
         <div class="container-fluid w-screen mt-3">
 
             {{-- HOME start --}}
-            <div class="home-section">
+            <div class="home-section" id="home">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="intro container text-center">
                         <img src="/frontend/img/logo.svg" class="mx-auto d-block" alt="">
@@ -28,7 +28,7 @@
             {{-- HOME end --}}
 
             {{-- Location Start --}}
-            <div class="location-section">
+            <div class="location-section" id="location">
                 <div id="paralax-image">
                 </div>
                 <div class="container py-2 pb-4  section-center section">
@@ -55,7 +55,7 @@
             {{-- Location End --}}
 
             {{-- Ourmenu --}}
-            <div class="ourmenu-section text-center">
+            <div class="ourmenu-section text-center" id="menu">
                 <div class="jumbotron jumbotron-fluid">
 
                     <div class="intro section-center">
@@ -74,7 +74,7 @@
             {{-- Ourmenu End --}}
 
             {{-- Who We Are --}}
-            <div class="whoweare-section position-relative">
+            <div class="whoweare-section position-relative" id="who">
                 <div class="container text-center  section-center">
                     <div class="row">
                         <div class="col-md-6">
@@ -102,7 +102,7 @@
             {{-- Who We Are End --}}
 
             {{-- Gallery Section Start --}}
-            <div class="gallery-section section mt-4">
+            <div class="gallery-section section mt-4" id="instagram">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-3"><img src="/frontend/img/photo/square-1.jpg" alt="" class="img-thumbnail no-border"></div>
@@ -116,7 +116,7 @@
 
 
             {{-- Catering Sectioon Start --}}
-            <div class="catering-section">
+            <div class="catering-section" id="catering">
                 <div class="container section-center">
                     <div class="row">
                         <div class="col-md-6">
@@ -186,7 +186,7 @@
             {{-- Catering End --}}
 
             {{-- Contact Section Start --}}
-            <div class="contact-section pt-2">              
+            <div class="contact-section pt-2" id="contact">              
                 <div class="jumbotron position-relative">
                     <div class="overlay"></div>
                     <div class="container">
