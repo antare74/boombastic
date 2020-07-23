@@ -227,7 +227,15 @@ main {
 }
 
 .intro img {
+    margin-bottom: 2em;
     width: 220px;
+}
+
+.intro h3 {
+    color: var(--clr-pink-dark);
+    background-color: var(--clr-white);
+    padding: 5px;
+    display: inline;
 }
 
 /*
@@ -313,32 +321,30 @@ Who We Are
 ===============
 */
 .whoweare-section {
-    background-color: var(--clr-yellow-light);
-    padding: 5vmin 0 30vmin 0;
-    overflow: hidden;
+    padding: 5vmin 0 13vmin;
+    background-color: var(--clr-white);
+    position: relative;
 }
 
 .whoweare-section .row .col-md-6 .restaurant img {
-    width: 80%;
+    width: 50%;
     border-radius: 0.2em;
-    position: relative;
-    left: -15vmin;
+    top: 0;
+    left: 0;
 }
 
-.whoweare-section .row .col-md-6:last-child {
+/* .whoweare-section .row .col-md-6:last-child {
     position: relative;
-}
+} */
 
 .whoweare-section .row .col-md-6 .ingredient img {
-    width: 80%;
+    width: 50%;
     border-radius: 0.2em;
-    position: absolute;
-    top: 30vmin;
+    top: 25vmin;
     left: 15vmin;
 }
 
 .whoweare-section .row .col-md-6 .panel {
-    position: absolute;
     top: 7vmin;
     left: -18vmin;
     background: var(--clr-yellow-light);
@@ -360,6 +366,17 @@ Who We Are
 
 /*
 =============== 
+Gallery Section
+===============
+*/
+
+.gallery-section {
+    position: relative;
+    /* background-color: var(--clr-white); */
+}
+
+/*
+=============== 
 Catering Section
 ===============
 */
@@ -367,10 +384,8 @@ Catering Section
 .catering-section {
     background-color: var(--clr-white);
     padding: 15vmin 0;
-    margin: inherit;
-    margin-top: 10vmin;
     box-shadow: var(--dark-shadow);
-    overflow: hidden;
+    position: relative;
 }
 
 .catering-section .row .col-md-6 .catering h1 {
@@ -382,20 +397,23 @@ Catering Section
 }
 
 .catering-section .row .col-md-6 .catering {
+    z-index: 1;
     position: absolute;
     top: -3vmin;
     left: -3vmin;
 }
 
-.catering-section .row .col-md-6 .bag img {
-    width: 15%;
+.catering-section .row .col-md-6 .catering-img .bag {
+    width: 20%;
     position: absolute;
-    top: 25vmin;
-    left: 29vmin;
+    right: 10vmin;
+    bottom: -5vmin;
 }
 
-.catering-section .row .col-md-6 .catering-img img {
-    width: 80%;
+.catering-section .row .col-md-6 .catering-img {
+    z-index: 0;
+    position: relative;
+    /* background-color: var(--clr-primary-2); */
 }
 
 /*
@@ -469,7 +487,7 @@ nav {
 }
 
 .navbar {
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav-center {
