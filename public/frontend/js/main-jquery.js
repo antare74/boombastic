@@ -28,14 +28,10 @@ $(document).ready(function () {
     //     })
     // })
     $(function () {
-        $('.links a').filter(() => {
-
+        $('.links a').filter(function () {
             return this.href == location.href
-
         }).parent().addClass('active').siblings().removeClass('active')
-
-        $('.links a').click(() => {
-
+        $('.links a').click(function () {
             $(this).parent().addClass('active').siblings().removeClass('active')
         })
     })
