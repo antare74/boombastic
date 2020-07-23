@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    {{-- Whatsapp --}}
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-4796b17c-9096-40cd-bf9f-3aa6baa32233"></div>
+    
     @include('includes.user.sidebar')
     @include('includes.user.header')
 
@@ -103,13 +107,16 @@
 
             {{-- Gallery Section Start --}}
             <div class="gallery-section section mt-4" id="instagram">
+                <h1 class="text-center py-4">Follow us on Instagram</h1>
                 <div class="container-fluid">
-                    <div class="row">
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-ef2a6729-9d67-463b-9d8f-c2b4c3f57d7d"></div>
+                    {{-- <div class="row">
                         <div class="col-md-3"><img src="/frontend/img/photo/square-1.jpg" alt="" class="img-thumbnail no-border"></div>
                         <div class="col-md-3"><img src="/frontend/img/photo/square-2.jpg" alt="" class="img-thumbnail"></div>
                         <div class="col-md-3"><img src="/frontend/img/photo/square-3.jpg" alt="" class="img-thumbnail"></div>
                         <div class="col-md-3"><img src="/frontend/img/photo/square-4.jpg" alt="" class="img-thumbnail"></div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- Gallery Section End --}}

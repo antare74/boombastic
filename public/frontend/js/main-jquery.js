@@ -58,7 +58,4 @@ $(document).ready(function () {
     var getYear = dateNow.getFullYear()
     date.html(getYear);
 
-
-
-
 });

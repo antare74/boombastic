@@ -382,6 +382,11 @@ Gallery Section
     /* background-color: var(--clr-white); */
 }
 
+.gallery-section h1 {
+    font-family: var(--ff-third);
+    color: var(--clr-pink-dark)gi;
+}
+
 /*
 =============== 
 Catering Section
