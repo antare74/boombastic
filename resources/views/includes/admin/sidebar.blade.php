@@ -34,16 +34,40 @@
           </li>
           <li class="nav-item has-treeview menu-open">
             <a href="{{ route('home.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fa fa-home"></i>
               <p>
                 Home
               </p>
             </a>
           </li>
+          <li class="nav-item has-treeview menu-open">
+                <a href="/admin/catering" class="nav-link">
+                    <i class="nav-icon fa fa-list-alt"></i>
+                    <p>
+                        Catering
+                    </p>
+                </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+                <a href="/admin/whatsapp" class="nav-link">
+                    <i class="nav-icon fa fa-whatsapp"></i>
+                    <p>
+                        Whatsapp
+                    </p>
+                </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+                <a href="/admin/contact" class="nav-link">
+                    <i class="nav-icon fa fa-phone"></i>
+                    <p>
+                        Contact
+                    </p>
+                </a>
+          </li>
           <li class="nav-item has-treeview">
             <a href="{{ route('logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon fa fa-lock"></i>
               <p>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
