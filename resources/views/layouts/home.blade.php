@@ -58,7 +58,7 @@
             <div class="ourmenu-section text-center">
                 <div class="jumbotron jumbotron-fluid">
 
-                    <div class="intro  section-center">
+                    <div class="intro section-center">
                         <div class="card mx-auto d-flex" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Treat Yourself</h5>
@@ -79,10 +79,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="restaurant">
-                                <img src="/frontend/img/photo/restaurant.jpg" alt="Restaurant" class="position-relative">
+                                <img src="/frontend/img/boombastic/whoweare_1.jpg" alt="Restaurant" class="position-relative">
                             </div>
                             <div class="ingredient">
-                                <img src="/frontend/img/photo/ingredients_2.jpg" alt="" class="position-absolute">
+                                <img src="/frontend/img/boombastic/whoweare_2.jpg" alt="" class="position-absolute">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -101,6 +101,7 @@
             </div>
             {{-- Who We Are End --}}
 
+            {{-- Gallery Section Start --}}
             <div class="gallery-section section mt-4">
                 <div class="container-fluid">
                     <div class="row">
@@ -111,7 +112,10 @@
                     </div>
                 </div>
             </div>
+            {{-- Gallery Section End --}}
 
+
+            {{-- Catering Sectioon Start --}}
             <div class="catering-section">
                 <div class="container section-center">
                     <div class="row">
@@ -120,7 +124,7 @@
                                 <h1>Catering</h1>
                             </div>
                             <div class="catering-img">
-                                <img src="/frontend/img/photo/potato_wedges.jpg" alt="">
+                                <img src="/frontend/img/boombastic/catering.jpg" alt="">
                                 <img src="/frontend/img/bag.svg" class="bag" alt="">
                             </div>
                         </div>
@@ -181,17 +185,61 @@
             </div>
             {{-- Catering End --}}
 
-
-
-
-
-            <div class="contact-section">
-                <div class="container section-center section">
-                    <div class="row">
-                        <h1>TEST</h1>
+            {{-- Contact Section Start --}}
+            <div class="contact-section pt-2">              
+                <div class="jumbotron position-relative">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <div class="contact-text pt-3">
+                                    <h3>Contact</h3>
+                                    <p>info@mysite.com</p>
+                                    <p>123-456-7890</p>
+                                    <p>500 Terry, Francois Street,<br>
+                                    San Franscisco, CA 94158</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-white">For Any Question, Leave your Details</p>
+                                <form action="" method="post">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="">Enter Your Name</label>
+                                                <input type="text" name="" id="" class="form-control bg-transparent"
+                                                    placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="">Enter Your Phone</label>
+                                                <input type="text" name="" id="" class="form-control bg-transparent"
+                                                    placeholder="Phone">
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="">Enter Your Email *</label>
+                                                <input type="text" name="" id="" class="form-control bg-transparent"
+                                                    placeholder="Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit"
+                                    class="btn catering-btn mx-auto d-block"><span>Send</span></button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            {{-- Contact End --}}
+
 
         </div>
     </main>

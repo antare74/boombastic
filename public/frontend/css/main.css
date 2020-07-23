@@ -214,7 +214,7 @@ main {
     */
 
 .home-section .jumbotron {
-    background-image: url("/frontend/img/photo/burger.jpg");
+    background-image: url("/frontend/img/boombastic/home.jpg");
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -283,7 +283,7 @@ Section 3 Our Menu
 */
 
 .ourmenu-section .jumbotron {
-    background-image: url("/frontend/img/photo/ingredient.jpg");
+    background-image: url("/frontend/img/boombastic/ourmenu.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -474,6 +474,48 @@ label {
 
 .catering-btn:hover {
     background: var(--clr-pink-dark);
+}
+
+/*
+=============== 
+Contact Section
+===============
+*/
+
+.contact-section .jumbotron {
+    background-image: url("/frontend/img/boombastic/contact.jpg");
+    height: 40vmin;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 0px !important;
+}
+
+.contact-section .overlay {
+    background-color: var(--clr-black);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.contact-section .jumbotron:hover .overlay {
+    opacity: 1;
+}
+
+.contact-text h3 {
+    font-family: var(--ff-third);
+    color: var(--clr-pink-dark);
+}
+
+.contact-text p {
+    color: var(--clr-white);
 }
 
 /*

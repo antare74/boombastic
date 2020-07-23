@@ -16,28 +16,25 @@
 
     /* Who We Are */
     .whoweare-section {
-        position: relative;
+        position: initial;
         width: initial;
         height: initial;
-        padding-bottom: 125vmin;
     }
 
     .whoweare-section .row .col-md-6 .panel {
-        position: relative;
-        top: 118vmin;
-        left: 0vmin;
+        top: initial;
+        width: initial;
+        height: initial;
     }
 
     .whoweare-section .row .col-md-6 .restaurant img {
         width: 100%;
-        left: 0vmin;
+        top: initial;
     }
 
     .whoweare-section .row .col-md-6 .ingredient img {
-        width: 90%;
-        position: absolute;
-        top: 113vmin;
-        left: 4.5vmin;
+        width: 100%;
+        top: 40vmax;
     }
 
     /* Catering */
@@ -75,8 +72,70 @@
     }
 
     /* Catering */
+    /* 
+    .catering-section .catering-text {
+        padding: 10vmin 0;
+    } */
+
+    /* Contact */
+
+    .contact-section .jumbotron {
+        position: initial;
+        top: initial;
+        height: initial;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    /* Who We Are */
+    .whoweare-section {
+        position: relative;
+        width: initial;
+        height: initial;
+        padding-bottom: 125vmin;
+    }
+
+    .whoweare-section .row .col-md-6 .panel {
+        position: relative;
+        top: 118vmin;
+        left: 0vmin;
+    }
+
+    .whoweare-section .row .col-md-6 .restaurant img {
+        width: 94%;
+        left: 3vmin;
+    }
+
+    .whoweare-section .row .col-md-6 .ingredient img {
+        width: 85%;
+        position: absolute;
+        top: 117vmin;
+        left: 6.5vmin;
+    }
+
+    /* gallery */
+
+    .gallery-section {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .gallery-section img {
+        margin: 4vmin 0;
+    }
+
+    /* Catering */
 
     .catering-section .catering-text {
         padding: 10vmin 0;
+    }
+
+    /* Contact */
+
+    .contact-section .jumbotron {
+        position: initial;
+        top: initial;
+        height: initial;
     }
 }
