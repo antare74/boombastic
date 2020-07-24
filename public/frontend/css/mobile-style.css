@@ -1,0 +1,204 @@
+@media only screen and (min-width: 768px) {
+
+    /* HOME */
+    .home-section .jumbotron {
+        height: initial;
+    }
+
+    .home-section .intro {
+        padding-top: 180px;
+    }
+
+    /* Sidebar */
+
+    .links a {
+        font-size: 1.5rem;
+    }
+
+    .sidebar-toggle {
+        right: 0rem;
+    }
+
+    /* Who We Are */
+    .whoweare-section {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .whoweare-section .row .col-md-6 .panel {
+        top: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .whoweare-section .row .col-md-6 .restaurant img {
+        width: 300px;
+        top: initial;
+    }
+
+    .whoweare-section .row .col-md-6 .ingredient img {
+        width: 300px;
+        top: 170px;
+        left: 200px;
+    }
+
+    /* Catering */
+    .catering-section {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .catering-section .row .col-md-6 .catering h1 {
+        margin-left: 2em;
+        padding: 0.2rem 0.5rem;
+        font-size: 2em;
+    }
+
+    /* .catering-section .row .col-md-6 .catering-img {
+        margin-left: 2em;
+    } */
+
+    .catering-section .row .col-md-6 .bag img {
+        top: 19vmin;
+        left: 19vmin;
+    }
+
+    /* gallery */
+
+    .gallery-section {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .gallery-section img {
+        margin: 4vmin 0;
+    }
+
+    /* Catering */
+    /* 
+    .catering-section .catering-text {
+        padding: 10vmin 0;
+    } */
+
+    /* Contact */
+
+    .contact-section .jumbotron {
+        position: initial;
+        top: initial;
+        height: initial;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .sidebar {
+        width: 400px;
+    }
+
+    .links-nav a {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 475px) {
+
+    /* Home */
+
+    .home-section .intro {
+        position: initial;
+        padding: initial;
+
+    }
+
+    .home-section .intro img {
+        width: 30%;
+    }
+
+    /* Location */
+
+    #paralax-image {
+        height: 150px;
+        margin-bottom: initial;
+    }
+
+
+    .location-section {
+        padding: initial;
+    }
+
+
+    /* Our menu  */
+
+    .ourmenu-section .intro {
+        padding-top: 20px;
+    }
+
+
+    /* sidebar */
+
+    .sidebar-toggle {
+        right: 0rem;
+    }
+
+
+    .logo_icon {
+        height: 30px;
+    }
+
+
+    /* Who We Are */
+    .whoweare-section {
+        position: relative;
+        width: initial;
+        height: initial;
+        padding-bottom: 125vmin;
+    }
+
+    .whoweare-section .row .col-md-6 .panel {
+        position: relative;
+        top: 118vmin;
+        left: 0vmin;
+    }
+
+    .whoweare-section .row .col-md-6 .restaurant img {
+        width: 94%;
+        left: 3vmin;
+    }
+
+    .whoweare-section .row .col-md-6 .ingredient img {
+        width: 85%;
+        position: absolute;
+        top: 120vmin;
+        left: 6.5vmin;
+    }
+
+    /* gallery */
+
+    .gallery-section {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .gallery-section img {
+        margin: 4vmin 0;
+    }
+
+    /* Catering */
+
+    .catering-section .catering-text {
+        padding: 10vmin 0;
+    }
+
+    /* Contact */
+
+    .contact-section .jumbotron {
+        position: initial;
+        top: initial;
+        height: initial;
+    }
+}
