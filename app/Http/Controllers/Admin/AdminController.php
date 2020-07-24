@@ -35,6 +35,14 @@ class AdminController extends Controller
         return redirect()->back()->with('success', $delete['message']);
     }
 
+    public function deleteFormWhatsapp($id){
+        $delete = $this->repo->deleteFormWhatsapp($id);
+        if (!$delete['status']){
+            return redirect()->back()->with('error', $delete['message']);
+        }
+        return redirect()->back()->with('success', $delete['message']);
+    }
+
     public function storeFormCatering(Request $request, $id = null){
         $contacts = $this->repo->storeFormCatering($request, $id);
         if (!$contacts['status']){
@@ -56,7 +64,7 @@ class AdminController extends Controller
         if (!$whatsapps['status']){
             return redirect()->back()->with('error', $whatsapps['message']);
         }
-        return redirect()->back()->with('success', 'catering updated!');
+        return redirect()->back()->with('success', 'whatsapp updated!');
     }
 
     public function indexFormCatering($id = null){

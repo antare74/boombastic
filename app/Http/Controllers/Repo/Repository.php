@@ -87,7 +87,11 @@ class Repository
     }
 
     public function getAllWhatsapp(){
-        return Whatsapp::with([])->get();
+        return Whatsapp::with([])->orderByDesc('status')->get();
+    }
+
+    public function getWhatsappWhereStatusIsTrue(){
+        return Whatsapp::with([])->where('status', 1)->get()->first();
     }
 
     public function storeFormContact($request, $id = null){
@@ -144,26 +148,35 @@ class Repository
             $result['message'] = 'phone number is not valid';
             return $result;
         }
-        $catering->full_name    = $request->full_name;
-        $catering->email        = $request->email;
-        $catering->phone        = $request->phone;
-        $catering->message      = $request->message;
-        $catering->save();
+
         $result['status']       = true;
         $result['message']      = $catering;
         return $result;
     }
 
+    public function createCatering($request, $catering){
+        $result     = ['status' => false, 'message' => ''];
+        try {
+            $catering->full_name    = $request->full_name;
+            $catering->email        = $request->email;
+            $catering->phone        = $request->phone;
+            $catering->message      = $request->message;
+            $catering->save();
+        }catch (\Exception $e){
+            $result['message']  = $e->getMessage();
+            return $result;
+        }
+    }
+
     public function storeFormWhatsapp($request, $id = null){
         $result     = ['status' => false, 'message' => ''];
-        $request->status = 0;
         $validator  = Validator::make($request->all(),
             [
                 'phone'        => 'required|max:20',
-                'status'       => 'required',
                 'message'      => 'required',
             ]
         );
+        $request->status = 0;
         if ($validator->fails()) {
             $result['message'] = $validator->errors()->first();
             return $result;
@@ -171,6 +184,10 @@ class Repository
         $whatsapp       = new Whatsapp();
         if ($id){
             $whatsapp   = $this->findWhatsappById($id);
+            if (!$whatsapp) {
+                $result['message'] = 'not available';
+                return $result;
+            }
         }
         $phoneService   = $this->standardPhone($request->phone);
         if (!$phoneService){
@@ -178,15 +195,37 @@ class Repository
             return $result;
         }
         if ($request->status == 'on'){
-            $request->status = 1;
+            $whatsappStatus = $this->getWhatsappWhereStatusIsTrue();
+            if ($whatsappStatus){
+                $whatsappStatus->status       = 0;
+                $whatsappStatus->phone        = $request->phone;
+                $whatsappStatus->save();
+            }
         }
-        $whatsapp->status       = $request->status;
-        $whatsapp->phone        = $request->phone;
-        $whatsapp->message      = $request->message;
-        $whatsapp->save();
+        $whatsapp = $this->createWhatsappStatus($request, $whatsapp);
+        if (!$whatsapp['status']){
+            $result['message'] = $whatsapp['message'];
+            return $result;
+        }
         $result['status']       = true;
         $result['message']      = $whatsapp;
         return $result;
+    }
+
+    public function createWhatsappStatus($request, $whatsapp){
+        $result     = ['status' => false, 'message' => ''];
+        try {
+            $request->status = 1;
+            $whatsapp->status       = $request->status;
+            $whatsapp->phone        = $request->phone;
+            $whatsapp->message      = $request->message;
+            $whatsapp->save();
+            $result['status']       = true;
+            $result['message']      = $whatsapp;
+        }catch (\Exception $e){
+            $result['message'] = $e->getMessage();
+            return $result;
+        }
     }
 
     public function deleteFormContact($id){
@@ -225,6 +264,23 @@ class Repository
                 $result['message']  = 'deleted!';
                 return $result;
             };
+        }catch (\Exception $e){
+            $result['message'] = $e->getMessage();
+            return $result;
+        }
+    }
+
+    public function deleteFormWhatsapp($id){
+        $result = ['status' => false, 'message' => ''];
+        if (!$id){
+            $result['message'] = 'required params is missing!';
+        }
+        try {
+            $whatsapp           = $this->findWhatsappById($id);
+            $whatsapp->delete();
+            $result['status']   = true;
+            $result['message']  = 'deleted!';
+            return $result;
         }catch (\Exception $e){
             $result['message'] = $e->getMessage();
             return $result;
