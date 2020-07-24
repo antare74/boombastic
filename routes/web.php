@@ -41,6 +41,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
         Route::get('/delete/{id?}', 'AdminController@deleteFormCatering');
         Route::any('/store/{id?}', 'AdminController@storeFormCatering');
     });
+
+    /* catering whatsapp */
+    Route::group(['prefix' => 'whatsapp'], function() {
+        Route::get('/{id?}', 'AdminController@indexFormWhatsapp');
+        Route::get('/delete/{id?}', 'AdminController@deleteFormWhatsapp');
+        Route::any('/store/{id?}', 'AdminController@storeFormWhatsapp');
+    });
 });
 
 /* contact route */

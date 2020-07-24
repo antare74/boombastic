@@ -13,12 +13,4 @@ class CateringController extends Controller
         $this->repo = new Repository();
     }
 
-    /* catering store and update */
-    public function storeFormCatering(Request $request, $id = null){
-        $storeFormCatering = $this->repo->storeFormCatering($request, $id);
-        if (!$storeFormCatering['status']){
-            return response()->json('Crate or update error: ' . json_encode($storeFormCatering['message']));
-        }
-        return response()->json('Crate or update success: '. json_encode($storeFormCatering['message']));
-    }
 }

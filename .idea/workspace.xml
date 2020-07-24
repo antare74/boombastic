@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,7 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5981d8-14cf-43c3-b4b1-c675495363c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bombastis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bombastis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CateringController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CateringController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Repo/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Repo/Repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/style.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/style.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/catering/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/catering/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/contact/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/contact/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/contact/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +42,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -138,6 +152,8 @@
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/giggsey/locale" />
+      <path value="$PROJECT_DIR$/vendor/giggsey/libphonenumber-for-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1euWYpAjrYFJUCXfiNqdkhoLgLT" />
@@ -151,7 +167,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -169,6 +187,9 @@
       <option name="presentableId" value="Default" />
       <updated>1595172013647</updated>
       <workItem from="1595172014682" duration="1046000" />
+      <workItem from="1595557297392" duration="206000" />
+      <workItem from="1595557685692" duration="2324000" />
+      <workItem from="1595592984807" duration="3446000" />
     </task>
     <servers />
   </component>
@@ -185,19 +206,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="416" y="157" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595557718147">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="416" y="157" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1366.738@0.30.1366.738" timestamp="1595557718147" />
+    <state x="466" y="157" width="424" height="480" key="FileChooserDialogImpl" timestamp="1595557492449">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="466" y="157" width="424" height="480" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1595557492449" />
     <state x="416" y="94" width="524" height="608" key="RollbackChangesDialog" timestamp="1595172324939">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="416" y="94" width="524" height="608" key="RollbackChangesDialog/0.30.1366.738@0.30.1366.738" timestamp="1595172324939" />
-    <state x="391" y="143" width="583" height="512" key="find.popup" timestamp="1595172825819">
+    <state x="391" y="143" width="583" height="512" key="find.popup" timestamp="1595519603722">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="391" y="143" width="583" height="512" key="find.popup/0.30.1366.738@0.30.1366.738" timestamp="1595172825819" />
-    <state x="347" y="46" width="670" height="676" key="search.everywhere.popup" timestamp="1595172664760">
+    <state x="391" y="143" width="583" height="512" key="find.popup/0.30.1366.738@0.30.1366.738" timestamp="1595519603722" />
+    <state x="347" y="177" width="672" height="677" key="run.anything.popup" timestamp="1595595941894">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="347" y="46" width="670" height="676" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1595172664760" />
+    <state x="347" y="177" width="672" height="677" key="run.anything.popup/0.30.1366.738@0.30.1366.738" timestamp="1595595941894" />
+    <state x="347" y="46" width="672" height="676" key="search.everywhere.popup" timestamp="1595595112961">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="347" y="46" width="672" height="676" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1595595112961" />
   </component>
 </project>

@@ -8,12 +8,9 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>contact</h1>
+                            <h1>whatsapp</h1>
                         </div>
                         <div class="col-sm-6">
-                            {{--                            <ol class="breadcrumb float-sm-right">--}}
-                            {{--                                <li class="breadcrumb-item"><a href="#">contact</a></li>--}}
-                            {{--                            </ol>--}}
                         </div>
                     </div>
                 </div>
@@ -31,10 +28,48 @@
                             <strong>Success! </strong> {{ session()->get('success') }}
                         </div>
                     @endif
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form action="/admin/whatsapp/store" method="POST">
+                                    @csrf
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">ADD NEW</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Phone</label>
+                                            <input type="text" class="form-control" name="phone" id="formGroupExampleInput" placeholder="Example input" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Is Active</label>
+                                            <br>
+                                            <input type="checkbox" name="status" checked data-toggle="toggle" data-size="mini" data-width="100">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput2">Message</label>
+                                            <textarea class="form-control text-left input-disable" name="message" placeholder="Message here..." id="catering-email" aria-describedby="basic-addon3" rows="2" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
+                                    <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModalLong">
+                                        <span class="fa fa-plus"></span>
+                                        Tambah Data
+                                    </button>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -50,10 +85,9 @@
                                         <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
+                                            <th>Status</th>
                                             <th>Phone</th>
-                                            <th>Received</th>
+                                            <th>Message</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
@@ -61,23 +95,22 @@
                                         @php
                                             $i =1;
                                         @endphp
-                                        @if($contacts)
-                                            @foreach($contacts as $contact)
+                                        @if($whatsapp)
+                                            @foreach($whatsapp as $wa)
                                                 <tr>
                                                     <td>{{ $i++ }}</td>
-                                                    <td>{{ $contact->full_name }}</td>
-                                                    <td>{{ $contact->email }}</td>
-                                                    <td> {{ $contact->phone }} </td>
-                                                    <td> {{ $contact->created_at }} </td>
+                                                    <td>{{ $wa->status }}</td>
+                                                    <td>{{ $wa->phone }}</td>
+                                                    <td> {{ $wa->message }} </td>
                                                     <td>
-                                                        <a href="contact/{{ $contact->id }}" class="btn btn-sm btn-info"><span class="fa fa-search"></span> Detail
+                                                        <a href="whatsapp/{{ $wa->id }}" class="btn btn-sm btn-info"><span class="fa fa-search"></span> Detail
                                                         </a>
-                                                        <button  class="btn btn-sm  btn-danger" data-toggle="modal" data-target="#exampleModal{{ $contact->id }}"><span class="fa fa-trash"></span>
+                                                        <button  class="btn btn-sm  btn-danger" data-toggle="modal" data-target="#exampleModal{{ $wa->id }}"><span class="fa fa-trash"></span>
                                                             Delete
                                                         </button>
                                                     </td>
                                                 </tr>
-                                                <div class="modal fade" id="exampleModal{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{ $contact->id }}" aria-hidden="true">
+                                                <div class="modal fade" id="exampleModal{{ $wa->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{ $wa->id }}" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
@@ -91,7 +124,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                                <a href="contact/delete/{{ $contact->id }}" class="btn btn-primary"> Confirm </a>
+                                                                <a href="whatsapp/delete/{{ $wa->id }}" class="btn btn-primary"> Confirm </a>
                                                             </div>
                                                         </div>
                                                     </div>

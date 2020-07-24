@@ -35,7 +35,7 @@ class AdminController extends Controller
         return redirect()->back()->with('success', $delete['message']);
     }
 
-    public function storeFormCatering(Request $request, $id){
+    public function storeFormCatering(Request $request, $id = null){
         $contacts = $this->repo->storeFormCatering($request, $id);
         if (!$contacts['status']){
             return redirect()->back()->with('error', $contacts['message']);
@@ -43,12 +43,20 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'catering updated!');
     }
 
-    public function storeFormContact(Request $request, $id){
+    public function storeFormContact(Request $request, $id = null){
         $contacts = $this->repo->storeFormContact($request, $id);
         if (!$contacts['status']){
             return redirect()->back()->with('error', $contacts['message']);
         }
         return redirect()->back()->with('success', 'contact updated!');
+    }
+
+    public function storeFormWhatsapp(Request $request, $id = null){
+        $whatsapps = $this->repo->storeFormWhatsapp($request, $id);
+        if (!$whatsapps['status']){
+            return redirect()->back()->with('error', $whatsapps['message']);
+        }
+        return redirect()->back()->with('success', 'catering updated!');
     }
 
     public function indexFormCatering($id = null){
@@ -70,6 +78,17 @@ class AdminController extends Controller
         $contacts = $this->repo->findContactById($id);
         if ($contacts){
             return view('pages.admin.contact.detail', compact('contacts'));
+        }
+    }
+
+    public function indexFormWhatsapp($id = null){
+        if (!$id){
+            $whatsapp = $this->repo->getAllWhatsapp();
+            return view('pages.admin.whatsapp.index', compact('whatsapp'));
+        }
+        $whatsapp = $this->repo->findWhatsappById($id);
+        if ($whatsapp){
+            return view('pages.admin.whatsapp.detail', compact('whatsapp'));
         }
     }
 }

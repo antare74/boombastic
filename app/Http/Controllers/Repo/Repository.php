@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Repo;
 
+use App\Whatsapp;
 use Validator;
 use App\Catering;
 use App\Contact;
@@ -73,6 +74,10 @@ class Repository
         return Catering::with([])->where('id', $id)->firstOrFail();
     }
 
+    public function findWhatsappById($id){
+        return Whatsapp::with([])->where('id', $id)->firstOrFail();
+    }
+
     public function getAllCatering(){
         return Catering::with([])->get();
     }
@@ -80,7 +85,12 @@ class Repository
     public function getAllContact(){
         return Contact::with([])->get();
     }
-    public function storeFormContact($request, $id){
+
+    public function getAllWhatsapp(){
+        return Whatsapp::with([])->get();
+    }
+
+    public function storeFormContact($request, $id = null){
         $result     = ['status' => false, 'message' => ''];
         $validator  = Validator::make($request->all(),
             [
@@ -141,6 +151,41 @@ class Repository
         $catering->save();
         $result['status']       = true;
         $result['message']      = $catering;
+        return $result;
+    }
+
+    public function storeFormWhatsapp($request, $id = null){
+        $result     = ['status' => false, 'message' => ''];
+        $request->status = 0;
+        $validator  = Validator::make($request->all(),
+            [
+                'phone'        => 'required|max:20',
+                'status'       => 'required',
+                'message'      => 'required',
+            ]
+        );
+        if ($validator->fails()) {
+            $result['message'] = $validator->errors()->first();
+            return $result;
+        }
+        $whatsapp       = new Whatsapp();
+        if ($id){
+            $whatsapp   = $this->findWhatsappById($id);
+        }
+        $phoneService   = $this->standardPhone($request->phone);
+        if (!$phoneService){
+            $result['message'] = 'phone number is not valid';
+            return $result;
+        }
+        if ($request->status == 'on'){
+            $request->status = 1;
+        }
+        $whatsapp->status       = $request->status;
+        $whatsapp->phone        = $request->phone;
+        $whatsapp->message      = $request->message;
+        $whatsapp->save();
+        $result['status']       = true;
+        $result['message']      = $whatsapp;
         return $result;
     }
 

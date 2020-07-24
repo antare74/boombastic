@@ -107,6 +107,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
         </div>
         <aside class="control-sidebar control-sidebar-dark">
