@@ -215,7 +215,7 @@ main {
 
 .home-section .jumbotron {
     background-image: url("/frontend/img/boombastic/home.jpg");
-    height: 100vh;
+    height: 50vmin;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -223,7 +223,7 @@ main {
 }
 
 .home-section .intro {
-    padding-top: 160px;
+    padding-top: 50px;
 }
 
 .intro img {
@@ -285,13 +285,13 @@ Section 2 Locations
 Section 3 Our Menu
 ===============
 */
-.ourmenu-section {
+/* .ourmenu-section {
     padding: 2rem 0;
-}
+} */
 
 .ourmenu-section .jumbotron {
     background-image: url("/frontend/img/boombastic/ourmenu.jpg");
-    height: 80vh;
+    height: 100%;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -299,7 +299,7 @@ Section 3 Our Menu
 }
 
 .ourmenu-section .intro {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .intro h5 {
@@ -330,10 +330,13 @@ Who We Are
 .whoweare-section {
     padding: 5vmin 0 13vmin;
     background-color: var(--clr-white);
+    height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .whoweare-section .row .col-md-6 .restaurant img {
+    position: absolute;
     width: 50%;
     border-radius: 0.2em;
     top: 0;
@@ -345,10 +348,11 @@ Who We Are
 } */
 
 .whoweare-section .row .col-md-6 .ingredient img {
+    position: absolute;
     width: 50%;
     border-radius: 0.2em;
-    top: 25vmin;
-    left: 15vmin;
+    top: 0;
+    left: 0;
 }
 
 .whoweare-section .row .col-md-6 .panel {
@@ -356,7 +360,7 @@ Who We Are
     left: -18vmin;
     background: var(--clr-yellow-light);
     text-align: left;
-    padding: 13vmin 13vmin 13vmin 13vmin;
+    padding: 10vmin 10vmin 10vmin 10vmin;
     box-shadow: var(--light-shadow);
 }
 
@@ -384,7 +388,7 @@ Gallery Section
 
 .gallery-section h1 {
     font-family: var(--ff-third);
-    color: var(--clr-pink-dark)gi;
+    color: var(--clr-pink-dark);
 }
 
 /*
@@ -574,8 +578,8 @@ nav {
     */
 .sidebar-toggle {
     position: fixed;
-    top: 2rem;
-    right: -2rem;
+    top: 5rem;
+    right: 5rem;
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
@@ -628,7 +632,7 @@ nav {
 
 .logo_icon {
     justify-self: center;
-    height: 20px;
+    height: 3rem;
     margin-top: 1rem;
 }
 
@@ -709,26 +713,6 @@ nav {
         font-size: 1rem;
         padding: 0.2rem 1rem;
     }
-
-    .logo_icon {
-        height: 40px;
-    }
-
-    .sidebar-toggle {
-        top: 4rem;
-        right: 0rem;
-    }
-
-    /* .hero {
-        height: 150vh;
-        padding-top: 13vh;
-        background-position: 50% 125%;
-    }
-
-    .logo_big {
-        top: 10rem;
-        height: 300px;
-    } */
 }
 
 footer {

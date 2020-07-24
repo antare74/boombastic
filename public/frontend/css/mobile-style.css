@@ -1,4 +1,5 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
+
     /* HOME */
     .home-section .jumbotron {
         height: initial;
@@ -12,6 +13,10 @@
 
     .links a {
         font-size: 1.5rem;
+    }
+
+    .sidebar-toggle {
+        right: 0rem;
     }
 
     /* Who We Are */
@@ -28,13 +33,14 @@
     }
 
     .whoweare-section .row .col-md-6 .restaurant img {
-        width: 100%;
+        width: 300px;
         top: initial;
     }
 
     .whoweare-section .row .col-md-6 .ingredient img {
-        width: 100%;
-        top: 40vmax;
+        width: 300px;
+        top: 170px;
+        left: 200px;
     }
 
     /* Catering */
@@ -86,7 +92,64 @@
     }
 }
 
+@media screen and (min-width: 600px) {
+    .sidebar {
+        width: 400px;
+    }
+
+    .links-nav a {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+    }
+}
+
+
 @media only screen and (max-width: 475px) {
+
+    /* Home */
+
+    .home-section .intro {
+        position: initial;
+        padding: initial;
+
+    }
+
+    .home-section .intro img {
+        width: 30%;
+    }
+
+    /* Location */
+
+    #paralax-image {
+        height: 150px;
+        margin-bottom: initial;
+    }
+
+
+    .location-section {
+        padding: initial;
+    }
+
+
+    /* Our menu  */
+
+    .ourmenu-section .intro {
+        padding-top: 20px;
+    }
+
+
+    /* sidebar */
+
+    .sidebar-toggle {
+        right: 0rem;
+    }
+
+
+    .logo_icon {
+        height: 30px;
+    }
+
+
     /* Who We Are */
     .whoweare-section {
         position: relative;
@@ -109,7 +172,7 @@
     .whoweare-section .row .col-md-6 .ingredient img {
         width: 85%;
         position: absolute;
-        top: 117vmin;
+        top: 120vmin;
         left: 6.5vmin;
     }
 
